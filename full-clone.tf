@@ -60,6 +60,6 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # (Optional) Add your SSH KEY
     sshkeys = <<EOF
-    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH2jhF/68zYKUJn1Pl8U8olbfYMsmiB25+gDabgOMACf
+    l8NEcdZhQvP88OUzY3zISJEoHkSAV0ESZw9rKJVkFjo
     EOF
 }
