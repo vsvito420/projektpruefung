@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: supress banner
+    file:
+      path: "/home/ubuntu/.hushlogin"
+      state: touch
+
+  - name: base packages
+    apt:
+      name:
+      - build-essential
+      - ca-certificates
+      - curl
+      - gnupg
+      - htop
+      - python3-dev
+      - python3-pip
+      - tmux
+      - vim
+      cache_valid_time: 3600    # update cache if more than an hour old
