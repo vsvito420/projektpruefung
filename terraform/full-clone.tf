@@ -8,9 +8,9 @@ resource "proxmox_vm_qemu" "testing02" {
     # VM General Settings
 
     # which proxmox server should this be launched on?
-    target_node = "node01"
+    target_node = "pve"
     # make sure this ID is unqiue.  If you reuse ID's you will get errors :)
-    vmid = "103"
+    vmid = "125"
     # name of the new device again
     name = "testing02"
     desc = "Description"
@@ -27,7 +27,7 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # VM CPU Settings
     # set cpu cores
-    cores = 4
+    cores = 8
     sockets = 1
     cpu = "host"
 
@@ -60,6 +60,6 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # (Optional) Add your SSH KEY
     sshkeys = <<EOF
-    YOUR_PUBLIC_SSH_KEY_FROM_ANSIBLE_SERVER
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH2jhF/68zYKUJn1Pl8U8olbfYMsmiB25+gDabgOMACf
     EOF
 }
