@@ -16,7 +16,7 @@ resource "proxmox_vm_qemu" "testing02" {
     desc = "Description"
 
     # VM Advanced General Settings
-    onboot = true
+    onboot = false
 
     # VM OS Settings
     clone = "VM 9000"
@@ -33,7 +33,7 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # VM Memory Settings
     # how much ram?
-    memory = 4096
+    memory = 2048
 
     # VM Network Settings
     network {
@@ -53,7 +53,7 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # (Optional) IP Address and Gateway
     # set to your network
-    # ipconfig0 = "ip=192.168.1.7/24,gw=192.168.1.1"
+    # ipconfig0 = "ip=dhcp/24,gw=192.168.50.1"
 
     # (Optional) Default User
     ciuser = "ubuntu"
