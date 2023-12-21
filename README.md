@@ -67,12 +67,14 @@ CasaOS als basis für den Appstore
 
 > **Automatisierungstools:**
 
-- [ ] > Auswahl von Tools und installation:
-- [ ] > **Terraform, Ansible, packer,**
+- [x] > Auswahl von Tools und installation:
+- [ ] > **Terraform
+- [ ] Ansible + semaphore
+- [ ] packer
 
-> Orchiestrierung:
 
-- [ ] > Kubernetes
+> zukunft: Orchiestrierung:
+- [ ] > Kubernetes ?
 
 > **Reverse Proxy Automatisieren:**
 
