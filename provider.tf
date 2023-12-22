@@ -15,7 +15,9 @@ terraform {
     }
 }
 
-
+variable "cloudflare_api_token" {
+  type = string
+}
 
 variable "proxmox_api_url" {
     type = string
@@ -40,4 +42,9 @@ provider "proxmox" {
     # (Optional) Skip TLS Verification
     pm_tls_insecure = true
 
+}
+
+
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
 }
