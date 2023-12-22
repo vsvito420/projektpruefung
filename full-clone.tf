@@ -10,7 +10,7 @@ resource "proxmox_vm_qemu" "testing02" {
     # which proxmox server should this be launched on?
     target_node = "pve"
     # make sure this ID is unqiue.  If you reuse ID's you will get errors :)
-    vmid = "125"
+    vmid = "126"
     # name of the new device again
     name = "testing02"
     desc = "Description"

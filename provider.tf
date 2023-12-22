@@ -7,8 +7,15 @@ terraform {
             source = "telmate/proxmox"
             version = "2.9.14"
         }
+
+        cloudflare = {
+        source  = "cloudflare/cloudflare"
+        version = "~> 4.0"
+        }
     }
 }
+
+
 
 variable "proxmox_api_url" {
     type = string
