@@ -7,16 +7,7 @@ terraform {
             source = "telmate/proxmox"
             version = "2.9.14"
         }
-
-        cloudflare = {
-        source  = "cloudflare/cloudflare"
-        version = "~> 4.0"
-        }
     }
-}
-
-variable "cloudflare_api_token" {
-  type = string
 }
 
 variable "proxmox_api_url" {
@@ -42,9 +33,4 @@ provider "proxmox" {
     # (Optional) Skip TLS Verification
     pm_tls_insecure = true
 
-}
-
-
-provider "cloudflare" {
-  api_token = var.cloudflare_api_token
 }
