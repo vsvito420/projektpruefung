@@ -53,7 +53,7 @@ resource "proxmox_vm_qemu" "testing02" {
 
     # (Optional) IP Address and Gateway
     # set to your network
-    # ipconfig0 = "ip=dhcp/24,gw=192.168.50.1"
+    ipconfig0 = "ip=dhcp/24,gw=192.168.50.1"
 
     # (Optional) Default User
     ciuser = "ubuntu"
