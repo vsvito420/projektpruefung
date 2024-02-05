@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "ceate_vm_9000.sh started..."
+echo "create_vm_9000.sh started..."
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"

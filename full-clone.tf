@@ -10,7 +10,7 @@ resource "proxmox_vm_qemu" "testing02" {
     # which proxmox server should this be launched on?
     target_node = "pve"
     # make sure this ID is unqiue.  If you reuse ID's you will get errors :)
-    vmid = "126"
+    vmid = "900"
     # name of the new device again
     name = "testing02"
     desc = "Description"
@@ -59,7 +59,7 @@ resource "proxmox_vm_qemu" "testing02" {
     ciuser = "ubuntu"
 
     # (Optional) Add your SSH KEY
-    sshkeys = <<EOF
-    l8NEcdZhQvP88OUzY3zISJEoHkSAV0ESZw9rKJVkFjo
-    EOF
+    #sshkeys = <<EOF
+   # l8NEcdZhQvP88OUzY3zISJEoHkSAV0ESZw9rKJVkFjo
+   # EOF
 }

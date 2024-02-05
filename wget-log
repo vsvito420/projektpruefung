@@ -1,0 +1,11 @@
+--2023-12-20 20:21:44--  https://apt.releases.hashicorp.com/gpg
+Resolving apt.releases.hashicorp.com (apt.releases.hashicorp.com)... 99.86.91.67, 99.86.91.78, 99.86.91.124, ...
+Connecting to apt.releases.hashicorp.com (apt.releases.hashicorp.com)|99.86.91.67|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3980 (3.9K) [binary/octet-stream]
+Saving to: ‘STDOUT’
+
+-                                         0%[                                                                             ]       0  --.-KB/s               -                                       100%[============================================================================>]   3.89K  --.-KB/s    in 0s      
+
+2023-12-20 20:21:44 (291 MB/s) - written to stdout [3980/3980]
+
