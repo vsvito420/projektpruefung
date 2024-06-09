@@ -5,8 +5,11 @@ author: [Christian Weiss, Vito Skolan]
 date: [07.06.2024]
 ---
 
-# Projekt Zbirka: Ein Add On für Proxmox für Automatisierung und Integration von Software und Infrastruktur
+# Zbirka
+## Projektarbeit IKA 9/22
+### Ein Add On für Proxmox für Automatisierung und Integration von Software und Infrastruktur
 
+![bg right 70%](./marpPictures/zbirka-logo.png)
 Christian Weiss, Vito Skolan
 07.06.2024
 
@@ -67,7 +70,6 @@ Christian Weiss, Vito Skolan
 - Erklärung, warum Proxmox VE verwendet wird
 - Vorteile von Proxmox VE
 ![bg right 70%](./marpPictures/proxmox-logo-stacked-color.png)
-
 
 ---
 
