@@ -1,7 +1,5 @@
 #!/bin/bash
-
 echo "create_vm_9000.sh gestartet..."
-
 # Überprüft, ob das Skript als Root ausgeführt wird
 if [ "$EUID" -ne 0 ]
   then echo "Bitte als Root ausführen"
@@ -9,13 +7,13 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Beispiel, wenn Sie einen Schlüssel in das Image injizieren müssen
-# FILE1=/root/ansible_ssh_key.txt
-# if test -f "$FILE1"; then
-#    echo "ansible ssh-Schlüsseldatei gefunden..."
-#  else
-#    echo "Konnte die Datei /root/anible_ssh_key.txt nicht finden. Bitte erstellen Sie diese Datei. Beenden."
-#    exit
-# fi
+ FILE1=/root/ansible_ssh_key.txt
+ if test -f "$FILE1"; then
+    echo "ansible ssh-Schlüsseldatei gefunden..."
+  else
+    echo "Konnte die Datei /root/anible_ssh_key.txt nicht finden. Bitte erstellen Sie diese Datei. Beenden."
+    exit
+ fi
 
 FILE2=/root/jammy-server-cloudimg-amd64.img.original
 # Überprüft, ob die Image-Datei vorhanden ist. Wenn ja, wird sie kopiert. Wenn nein, wird sie heruntergeladen.

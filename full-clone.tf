@@ -1,58 +1,54 @@
-# Proxmox Full-Clone
-# ---
-# Create a new VM from a clone
-
-# enter the the name of the new device
+# Proxmox Vollständiger Klon
 resource "proxmox_vm_qemu" "testing02" {
 
     # VM General Settings
 
-    # which proxmox server should this be launched on?
+    # Proxmox Server Name
     target_node = "pve"
-    # make sure this ID is unqiue.  If you reuse ID's you will get errors :)
+    # Bitte Geben sie eine Eindeutige ID an!
     vmid = "126"
-    # name of the new device again
+    # Proxmox Server Name erneut
     name = "testing02"
     desc = "Description"
 
-    # VM Advanced General Settings
+    # Starten bei dem Boot von Proxmox?
     onboot = false
 
     # VM OS Settings
     clone = "VM 9000"
 
-    # make sure to install qemu-guest-agent on image cloning
-    # otherwise terafform will hang creating the vm
+    # stelle sicher qemu-guest-agent wird installiert bei dem image cloning
+    # ansonsten bleibt terraform stehen in der konfiguration!
     agent = 1
 
-    # VM CPU Settings
+    # VM CPU Einstellugen
     # set cpu cores
     cores = 8
     sockets = 1
     cpu = "host"
 
-    # VM Memory Settings
-    # how much ram?
+    # VM Memory Einstellugen
+    # Wie viel RAM?
     memory = 2048
 
-    # VM Network Settings
+    # VM Network Einstellugen
     network {
         bridge = "vmbr0"
         model  = "virtio"
     }
 
-    # how big for the disk image?
+    # Wie groß soll das disk Image sein?
     disk {
         storage = "local-lvm"
         type = "virtio"
         size = "8G"
     }
 
-    # VM Cloud-Init Settings
+    # VM Cloud-Init Einstellugen
     os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
-    # set to your network
+    # Setze deine Netzwerkeinstellungen
     ipconfig0 = "ip=dhcp/24,gw=192.168.50.1"
 
     # (Optional) Default User
